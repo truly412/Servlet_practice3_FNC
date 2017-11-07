@@ -69,7 +69,7 @@
 		</div>
 		<div class="form-group">
 			<label for="pw">Password:</label>
-			<input type="password" class="form-control" id="pw" name="pw">
+			<input type="password" class="form-control" id="pw1" name="pw">
 		</div>
 		<div class="form-group">
 			<label for="pw2">Password Confirm:</label>

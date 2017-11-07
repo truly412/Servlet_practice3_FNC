@@ -95,7 +95,7 @@
 <body>
 <%@ include file="../temp/header.jsp"%>
 <section id="main">
-	<h1>Member List</h1>
+	<h1>Member List asd</h1>
 	<article id="list">
 	
 	<table class="table table-hover">

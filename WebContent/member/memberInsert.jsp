@@ -59,7 +59,7 @@
 <body>
 <%@ include file="../temp/header.jsp"%>
 <section id="main">
-	<h1>JOIN add</h1>
+	<h1>JOIN addtt</h1>
 	<article id="list">
 	<form action="./memberInsertProcess.jsp" name="frm" method="get">
 		<div class="form-group">

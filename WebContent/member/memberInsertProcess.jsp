@@ -24,6 +24,7 @@
 	}
 	
 	request.setAttribute("message", s);
+	request.setAttribute("path", "./memberList.jsp");
 	   
 	   // 1.Foward
 	   RequestDispatcher view = request.getRequestDispatcher("../common/result.jsp"); //서버내부에서 이동하는 페이지로 보고 입력
@@ -37,10 +38,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>Insert title here</title>
-<script type="text/javascript">
-	alert('<%=s%>')
-	location.href="./memberList.jsp"
-</script>
+
 </head>
 <body>
 

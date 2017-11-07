@@ -10,11 +10,25 @@ import com.sun.org.apache.regexp.internal.recompile;
 import com.sun.xml.internal.bind.v2.runtime.unmarshaller.Discarder;
 
 public class MemberDAO {
-	public int getTotalCount(String kind,String search) throws Exception {
+	//idcheck
+	public boolean idCheck(String id) throws Exception {
+		boolean check=true;
 		Connection con = DBConnector.getConnect();
-		String sql = "select nvl(count(id),0) from member where "+kind+" like ? ";
+		String sql = "select * from member where id=?";
 		PreparedStatement st = con.prepareStatement(sql);
-		st.setString(1, search);
+		st.setString(1, id);
+		ResultSet rs = st.executeQuery();
+		if(rs.next()==true) {
+			check=false;
+		}
+		DBConnector.disConnect(rs, st, con);
+		return check;
+	}
+	
+	public int getTotalCount(/*String kind,String search*/) throws Exception {
+		Connection con = DBConnector.getConnect();
+		String sql = "select nvl(count(id),0) from member";
+		PreparedStatement st = con.prepareStatement(sql);
 		ResultSet rs = st.executeQuery();
 		rs.next();
 		int result = rs.getInt(1);

@@ -33,7 +33,7 @@
 	ArrayList<MemberDTO> ar = memberDAO.selectList(startRow,lastRow,kind,search);
 	
 	//totalCount 이용 totalPage
-	int totalCount = memberDAO.getTotalCount(kind,search);
+	int totalCount = memberDAO.getTotalCount();
 	int totalPage=0;
 	if (totalCount%perPage==0) {
 		totalPage=totalCount/perPage;
